@@ -1,0 +1,12 @@
+# --- credentials file ---
+credentials.auto.tfvars
+
+# --- Terraform directories ---
+.terraform/*
+
+# --- Terraform state files (sensitive, environment-specific) ---
+*.tfstate
+*.tfstate.*
+
+# --- Ansible Dynamic Inventory File ---
+kubespray-inventory.ini
