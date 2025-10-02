@@ -18,6 +18,8 @@ pip install --upgrade pip
 pip install -r requirements.txt 
 cp -rfp inventory/sample inventory/mycluster
 cp $ROOT_DIR/terraform/kubespray-inventory.ini ./inventory/mycluster/inventory.ini
-ansible-playbook -i ./inventory/mycluster/inventory.ini --become --become-user=root cluster.yml
+sed -i 's/^\(argocd_enabled:\).*/\1 true/' ./inventory/mycluster/group_vars/k8s_cluster/addons.yml
+sed -i 's/^\(metrics_server_enabled:\).*/\1 true/' ./inventory/mycluster/group_vars/k8s_cluster/addons.yml
+ansible-playbook -i ./inventory/mycluster/inventory.ini --become --become-user=root cluster.yml | tee ../cluster_setup_output.txt
 mkdir -p ~/.kube
 cp ./inventory/mycluster/artifacts/admin.conf ~/.kube/config
