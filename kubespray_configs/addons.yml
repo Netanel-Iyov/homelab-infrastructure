@@ -32,7 +32,7 @@ ingress_publish_status_address: ""
 ingress_alb_enabled: false
 
 # Cert manager deployment
-cert_manager_enabled: false
+cert_manager_enabled: true
 # cert_manager_namespace: "cert-manager"
 # cert_manager_tolerations:
 #   - key: node-role.kubernetes.io/control-plane
