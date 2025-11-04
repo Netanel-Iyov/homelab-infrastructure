@@ -13,5 +13,5 @@ spec:
         cloudflare:
           email: nati16368447@gmail.com
           apiKeySecretRef:
-            name: cloudflare-api-token-secret
+            name: cloudflare-api-token
             key: api-key

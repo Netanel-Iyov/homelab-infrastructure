@@ -4,7 +4,7 @@ KUBESPRAY_VERSION="v2.28.1"
 LOG_FILE="$ROOT_DIR/cluster_setup_output.txt"
 
 
-echo "Initializing Terraform..."
+# echo "Initializing Terraform..."
 cd $ROOT_DIR/terraform
 terraform init
 terraform apply -auto-approve
@@ -15,7 +15,7 @@ cd $ROOT_DIR
 if [ ! -d "kubespray" ]; then
     git clone https://github.com/kubernetes-sigs/kubespray.git
 fi
-cd kubespray
+cd $ROOT_DIR/kubespray
 git fetch --tags
 git checkout $KUBESPRAY_VERSION
 
@@ -40,3 +40,7 @@ echo "Setting up kubeconfig..."
 mkdir -p ~/.kube
 cp ./inventory/mycluster/artifacts/admin.conf ~/.kube/config
 chmod 600 ~/.kube/config
+
+echo "Please Run the following steps manually:"
+echo "Apply cloudflare-api-token-secret.yaml, cluster-issuer.yaml argocd-ingress.yaml argocd-configmap.yaml"
+echo "Apply argocd-certificate.yaml and run kubectl rollout restart deployment argocd-server -n argocd"
