@@ -39,6 +39,7 @@ ansible-playbook -i ./inventory/mycluster/inventory.ini --become --become-user=r
 echo "Setting up kubeconfig..."
 mkdir -p ~/.kube
 cp ./inventory/mycluster/artifacts/admin.conf ~/.kube/config
+rm -rf ./inventory/mycluster/artifacts/admin.conf
 chmod 600 ~/.kube/config
 
 echo "Please Run the following steps manually:"
