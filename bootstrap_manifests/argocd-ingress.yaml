@@ -13,7 +13,7 @@ spec:
   - hosts:
     - '*.niyov.com'
     - niyov.com
-    secretName: niyov-wildcard-tls
+    secretName: niyov-wildcard-certificate-tls
   rules:
   - host: argocd.niyov.com
     http:

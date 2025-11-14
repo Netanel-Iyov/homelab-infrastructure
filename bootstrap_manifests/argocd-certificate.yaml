@@ -4,7 +4,7 @@ metadata:
   name: niyov-wildcard-certificate
   namespace: argocd
 spec:
-  secretName: niyov-wildcard-tls
+  secretName: niyov-wildcard-certificate-tls
   issuerRef:
     name: letsencrypt-dns01-issuer
     kind: ClusterIssuer
