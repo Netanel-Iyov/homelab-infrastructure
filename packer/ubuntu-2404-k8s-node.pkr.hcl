@@ -183,7 +183,15 @@ build {
         ]
     }
 
-    # 6. Final cleanup to shrink image
+    # 6. Create k8s-cluster data directory for mount points
+    provisioner "shell" {
+        inline = [
+            "sudo mkdir -p /k8s-cluster/data",
+            "sudo chmod -R 775 /k8s-cluster/data"
+        ]
+    }
+
+    # 7. Final cleanup to shrink image
     provisioner "shell" {
         inline = [
             "sudo apt-get autoremove -y",
