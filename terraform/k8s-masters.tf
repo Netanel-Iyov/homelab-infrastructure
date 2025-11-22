@@ -14,6 +14,7 @@ resource "proxmox_vm_qemu" "masters" {
   full_clone = true
   os_type = "cloud-init"
   scsihw = "virtio-scsi-single"
+  onboot = true
 
   cpu {
     cores  = each.value.cores
