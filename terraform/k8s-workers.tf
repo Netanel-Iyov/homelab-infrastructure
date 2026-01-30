@@ -1,7 +1,7 @@
 variable "workers" {
   default = {
-    worker1 = { name = "k8s-worker-1", vmid = 222, ip = "192.168.0.222", cores = 2, memory = 2096 },
-    worker2 = { name = "k8s-worker-2", vmid = 223, ip = "192.168.0.223", cores = 2, memory = 2096 }
+    worker1 = { name = "k8s-worker-1", vmid = 222, ip = "192.168.0.222", cores = 2, memory = 3144 },
+    worker2 = { name = "k8s-worker-2", vmid = 223, ip = "192.168.0.223", cores = 2, memory = 3144 }
   }
 }
 

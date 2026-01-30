@@ -1,6 +1,6 @@
 variable "masters" {
   default = {
-    master1 = { name = "k8s-master-1", vmid = 221, ip = "192.168.0.221", cores = 2, memory = 4096 }
+    master1 = { name = "k8s-master-1", vmid = 221, ip = "192.168.0.221", cores = 4, memory = 6288 }
   }
 }
 
