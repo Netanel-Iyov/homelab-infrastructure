@@ -44,5 +44,5 @@ chmod 600 ~/.kube/config
 
 echo "Please Run the following steps manually:"
 echo "Edit cloudflare-api-token-secret.yaml and insert proper Cloudflare Global API Token"
-echo "Apply cloudflare-api-token-secret.yaml, cluster-issuer.yaml argocd-ingress.yaml argocd-configmap.yaml"
-echo "Apply argocd-certificate.yaml and run kubectl rollout restart deployment argocd-server -n argocd"
+echo "cluster-issuer.yaml argocd-ingress.yaml argocd-configmap.yaml"
+echo "Apply certificate.yaml and run kubectl rollout restart deployment argocd-server -n argocd"

@@ -2,7 +2,7 @@ apiVersion: cert-manager.io/v1
 kind: Certificate
 metadata:
   name: niyov-wildcard-certificate
-  namespace: argocd
+  namespace: cert-manager
 spec:
   secretName: niyov-wildcard-tls
   issuerRef:
@@ -12,3 +12,8 @@ spec:
   dnsNames:
     - niyov.com
     - '*.niyov.com'
+
+  secretTemplate:
+    annotations:
+      reflector.v1.k8s.emberstack.com/reflection-allowed: "true"
+      reflector.v1.k8s.emberstack.com/reflection-auto-enabled: "true"
