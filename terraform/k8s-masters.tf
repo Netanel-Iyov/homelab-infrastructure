@@ -24,7 +24,7 @@ resource "proxmox_vm_qemu" "masters" {
   memory = each.value.memory
 
   disk {
-    size    = "32G"
+    size    = "64G"
     type    = "disk"
     slot    = "scsi0"
     storage = "local-lvm"       # Your storage pool
