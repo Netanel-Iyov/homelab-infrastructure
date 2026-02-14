@@ -13,7 +13,7 @@ resource "proxmox_vm_qemu" "multi-purpose" {
     sockets = 1
   }
 
-  memory = 2048
+  memory = 3072
 
   disk {
     size    = "32G"
