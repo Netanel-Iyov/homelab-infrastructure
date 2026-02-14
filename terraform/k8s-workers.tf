@@ -1,6 +1,6 @@
 variable "workers" {
   default = {
-    worker1 = { name = "k8s-worker-1", vmid = 222, ip = "192.168.0.222", cores = 4, memory = 6144 }
+    worker1 = { name = "k8s-worker-1", vmid = 222, ip = "192.168.0.222", cores = 4, memory = 7168 }
   }
 }
 
@@ -54,6 +54,6 @@ resource "proxmox_vm_qemu" "workers" {
     type = "serial0"
   }
 
-  ciuser    = "ubuntu"
+  ciuser    = "niyov"
   sshkeys = file("~/.ssh/id_rsa.pub")
 }

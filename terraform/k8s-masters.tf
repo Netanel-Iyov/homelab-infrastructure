@@ -1,6 +1,6 @@
 variable "masters" {
   default = {
-    master1 = { name = "k8s-master-1", vmid = 221, ip = "192.168.0.221", cores = 4, memory = 6288 }
+    master1 = { name = "k8s-master-1", vmid = 221, ip = "192.168.0.221", cores = 4, memory = 7168 }
   }
 }
 
@@ -54,6 +54,6 @@ resource "proxmox_vm_qemu" "masters" {
     type = "serial0"
   }
 
-  ciuser    = "ubuntu"
+  ciuser    = "niyov"
   sshkeys = file("~/.ssh/id_rsa.pub")
 }

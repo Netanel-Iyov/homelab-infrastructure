@@ -46,6 +46,6 @@ resource "proxmox_vm_qemu" "multi-purpose" {
     type = "serial0"
   }
 
-  ciuser    = "ubuntu"
+  ciuser    = "niyov"
   sshkeys = file("~/.ssh/id_rsa.pub")
 }
